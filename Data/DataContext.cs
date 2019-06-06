@@ -12,6 +12,10 @@ namespace Data
         {
         }
         public DbSet<User> Users { get; set; }
-
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Device> Devices { get; set; }
+        public DbSet<Shop> Shops { get; set; }
+        public DbSet<GameObject> GameObjects { get; set; }
+        public DbSet<GameObjectShop> GameObjectShops { get; set; }
     }
 }

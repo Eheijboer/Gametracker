@@ -13,7 +13,7 @@ namespace Logic
     public class UserLogic : BaseLogic<User>, IUserLogic
     {
         protected new IUserRepository Repository => (IUserRepository)base.Repository;
-        protected UserLogic(IUserLogic repository) : base((IRepository<User>)repository)
+        public UserLogic(IUserRepository repository) : base((IRepository<User>)repository)
         {
         }
     }

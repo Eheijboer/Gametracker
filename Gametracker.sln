@@ -3,13 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{0EA5CF73-3B3A-4D6B-9C9A-D3134E2186A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{0EA5CF73-3B3A-4D6B-9C9A-D3134E2186A1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E883026-73DA-4E4A-A0A2-0114D51050DE} = {3E883026-73DA-4E4A-A0A2-0114D51050DE}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{3D82510D-62A7-40C6-9953-418290586C05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{3D82510D-62A7-40C6-9953-418290586C05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{3E883026-73DA-4E4A-A0A2-0114D51050DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{3E883026-73DA-4E4A-A0A2-0114D51050DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{17914DAE-87ED-450D-B5A1-13796C2B1A48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj", "{17914DAE-87ED-450D-B5A1-13796C2B1A48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

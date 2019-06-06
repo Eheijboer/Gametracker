@@ -32,14 +32,49 @@ namespace API
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Gametracker API", Version = "v1" });
+                c.AddSecurityDefinition("Bearer", new ApiKeyScheme
+                {
+                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                    Name = "Authorization",
+                    In = "header",
+                    Type = "apiKey"
+                });
+
+                c.SwaggerDoc("v1", new Info { Title = "Nudging API", Version = "v1" });
             });
             services.AddDbContext<DataContext>(x =>
                 x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<DbContext, DataContext>();
             services.AddScoped<IUserLogic, UserLogic>();
             services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddScoped<IBrandLogic, BrandLogic>();
+            services.AddScoped<IBrandRepository, BrandRepository>();
+
+            services.AddScoped<IDeviceLogic, DeviceLogic>();
+            services.AddScoped<IDeviceRepository, DeviceRepository>();
+
+            services.AddScoped<IShopLogic, ShopLogic>();
+            services.AddScoped<IShopRepository, ShopRepository>();
+       
+            services.AddScoped<IGameObjectLogic, GameObjectLogic>();
+            services.AddScoped<IGameObjectRepository, GameObjectRepository>();
+
+            services.AddScoped<IAuthLogic, AuthLogic>();
+            services.AddScoped<IAuthRepository, AuthRepository>();
+
+            services.AddScoped<AuthRepository>();
+
+
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -62,12 +97,14 @@ namespace API
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gametracker API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Nudging API V1");
                 c.RoutePrefix = string.Empty;
                 c.DisplayRequestDuration();
             });
+
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseCors();
         }
     }
 }
