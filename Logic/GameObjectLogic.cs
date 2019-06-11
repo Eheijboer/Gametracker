@@ -11,6 +11,9 @@ namespace Logic
     public interface IGameObjectLogic : IBaseLogic<GameObject>
     {
         Task<List<GameObject>> GetListOfGameObjects();
+        Task<GameObjectShop> GetSpecificGameObjectShop(int id);
+        Task<List<GameObjectShop>> GetListGameObjectShop(int GameObjectId);
+        Task<GameObject> GetSpecificGameObject(int GameObjectId);
     }
     public class GameObjectLogic : BaseLogic<GameObject>, IGameObjectLogic
     {
@@ -21,6 +24,19 @@ namespace Logic
         public async Task<List<GameObject>> GetListOfGameObjects()
         {
             return await Repository.GetListOfGameObjects();
+        }
+        public async Task<GameObjectShop> GetSpecificGameObjectShop(int id)
+        {
+            return await Repository.GetSpecificGameObjectShop(id);
+        }
+        public async Task<List<GameObjectShop>> GetListGameObjectShop(int GameObjectId)
+        {
+            return await Repository.GetListOfGameObjectShop(GameObjectId);
+        }
+
+        public async Task<GameObject> GetSpecificGameObject(int GameObjectId)
+        {
+            return await Repository.GetSpecificGameObject(GameObjectId);
         }
     }
 }

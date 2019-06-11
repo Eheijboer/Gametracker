@@ -36,11 +36,35 @@ namespace API.Controllers
             return Ok(gameobjects);
         }
 
+        [HttpGet("GetListGameObjectShop/{gameobjectId}")]
+        public async Task<IActionResult> GetListGameObjectShop(int gameobjectId)
+        {
+            var gameobjects = await _gameobjectLogic.GetListGameObjectShop(gameobjectId);
+            if (gameobjects == null)
+            {
+                return NoContent();
+            }
+
+            return Ok(gameobjects);
+        }
+
+        [HttpGet("GetSpecificGameObjectShop/{id}")]
+        public async Task<IActionResult> GetSpecificGameObjectShop(int id)
+        {
+            var gameobjects = await _gameobjectLogic.GetSpecificGameObjectShop(id);
+            if (gameobjects == null)
+            {
+                return NoContent();
+            }
+
+            return Ok(gameobjects);
+        }
+
 
         [HttpGet("{gameobjectId}")]
         public async Task<IActionResult> GetGameObjectById(int gameobjectId)
         {
-            GameObject gameobject = await _gameobjectLogic.FindAsync(gameobjectId);
+            GameObject gameobject = await _gameobjectLogic.GetSpecificGameObject(gameobjectId);
             if (gameobject == null)
             {
                 return NoContent();

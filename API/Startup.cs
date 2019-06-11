@@ -40,7 +40,7 @@ namespace API
                     Type = "apiKey"
                 });
 
-                c.SwaggerDoc("v1", new Info { Title = "Nudging API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "GameTracker API", Version = "v1" });
             });
             services.AddDbContext<DataContext>(x =>
                 x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -97,7 +97,7 @@ namespace API
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Nudging API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "GameTracker API V1");
                 c.RoutePrefix = string.Empty;
                 c.DisplayRequestDuration();
             });

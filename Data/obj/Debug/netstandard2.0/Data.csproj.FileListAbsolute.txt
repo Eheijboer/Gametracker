@@ -10,3 +10,15 @@ D:\xampp\htdocs\Gametracker\Data\bin\Debug\netstandard2.0\Models.pdb
 D:\xampp\htdocs\Gametracker\Data\obj\Debug\netstandard2.0\Data.csproj.CopyComplete
 D:\xampp\htdocs\Gametracker\Data\obj\Debug\netstandard2.0\Data.dll
 D:\xampp\htdocs\Gametracker\Data\obj\Debug\netstandard2.0\Data.pdb
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\bin\Debug\netstandard2.0\Data.deps.json
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\bin\Debug\netstandard2.0\Data.dll
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\bin\Debug\netstandard2.0\Data.pdb
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\bin\Debug\netstandard2.0\Models.dll
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\bin\Debug\netstandard2.0\Models.pdb
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\obj\Debug\netstandard2.0\Data.csprojAssemblyReference.cache
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\obj\Debug\netstandard2.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\obj\Debug\netstandard2.0\Data.AssemblyInfoInputs.cache
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\obj\Debug\netstandard2.0\Data.AssemblyInfo.cs
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\obj\Debug\netstandard2.0\Data.csproj.CopyComplete
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\obj\Debug\netstandard2.0\Data.dll
+C:\Users\Brend\Desktop\rpeo\Gametracker\Data\obj\Debug\netstandard2.0\Data.pdb
