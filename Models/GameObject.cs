@@ -10,8 +10,6 @@ namespace Models
         public string Name { get; set; }
         public Status Status { get; set; }
         public Shop Shop { get; set; }
-        public int BoughtFor { get; set; }
-        public DateTime BoughtDate { get; set; }
         public ObjectType ObjectType { get; set; }
         public Device Device { get; set; }
         public List<GameObjectShop> GameObjectShop { get; set; }

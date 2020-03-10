@@ -82,7 +82,7 @@ namespace API.Controllers
         {
             await _gameobjectLogic.AddAsync(gameobject);
             return CreatedAtAction(nameof(GetGameObjectById),
-                new { vId = gameobject.Id },
+                new { gameobjectId = gameobject.Id },
                 gameobject);
         }
 
